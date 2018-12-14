@@ -43,7 +43,7 @@ init(Params) ->
    Level = config_val(level, Params, debug),
 
    %% open udp socket
-   {ok, Socket} = gen_udp:open(Port, ?SOCKET_OPTIONS),
+   {ok, Socket} = gen_udp:open(0, ?SOCKET_OPTIONS),
 
    {ok, #state{
       host = Host,
